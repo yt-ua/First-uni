@@ -1,0 +1,768 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  width: 100%;
+  margin: 0 auto;
+  color: #555555;
+  font-family: UD デジタル 教科書体 N-R;
+}
+
+.page {
+  width: 100%;
+  object-fit: cover;
+}
+
+header {
+  width: 100%;
+  object-fit: cover;
+  padding-top: 10px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgb(233, 236, 244, 0.96);
+  box-shadow: 0px 10px 20px rgb(0 0 0 / 20%);
+}
+
+header .wrapper {
+  width: 100%;
+  object-fit: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+select {
+  padding: 15px 20px 10px 20px;
+  border: 1px solid #DED9D9;
+  font-size: 12px;
+  margin-right: 50px;
+}
+
+select:hover {
+  background-color: #2a4198;
+  color: #e9ecf4;
+}
+
+nav.top {
+  border-bottom: 1px solid #DED9D9;
+  padding: 25px 0;
+}
+
+nav.top ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+nav.top li {
+  padding: 0 30px;
+  border-right: solid #DED9D9 1px;
+}
+
+nav.top li:last-child {
+  border-right: none;
+}
+
+nav.Item {
+  text-decoration: none;
+}
+
+.Item-Text {
+  position: relative;
+  z-index: 1;
+}
+
+.Item-Text:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 3px;
+  background: #2a4198;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.Item:hover .Item-Text:after {
+  width: 100%;
+}
+
+
+/* --------------------------------------
+フッター
+---------------------------------------*/
+
+nav.bottom {
+  padding: 20px 10px;
+  width: 1100px;
+  margin: 0 auto;
+}
+
+nav.bottom ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+nav.bottom a:hover {
+  text-decoration: underline #555555 1px;
+}
+
+footer {
+  background-color: #e9ecf4;
+  border-top: 1px solid #DED9D9;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 900px;
+  margin: 0 auto;
+  padding: 80px 30px;
+}
+
+.footer-links li {
+  line-height: 2.4;
+}
+
+.footer-links img {
+  width: 300px;
+  height: 100px;
+}
+
+.links-center a:hover {
+  text-decoration: underline #555555 1px;
+}
+
+.links-right a:hover {
+  text-decoration: underline #555555 1px;
+}
+
+small {
+  display: block;
+  width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+  border-top: 1px solid #DED9D9;
+}
+
+
+/* ---------------------------------
+トップページ
+----------------------------------*/
+
+.eyecatch {
+  width: 100%;
+  object-fit: cover;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 0 auto;
+}
+
+.eyecatch img {
+  width: 100%;
+  height: calc(90vh - 120px);
+  object-fit: cover;
+  margin-top: 120px;
+}
+
+section.topics {
+  overflow: hidden;
+  margin: 50px 0 10px 0;
+}
+
+section.topics h2 {
+  margin-bottom: 10px;
+  font-family: Sylfaen;
+  font-size: 45px;
+  text-align: center;
+}
+
+section.topics span {
+  color: #2a4198;
+}
+
+section.topics h3 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #a3a3a3;
+}
+
+section.topics p {
+  font-size: 20px;
+  color: #a3a3a3;
+}
+
+table {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+table tr {
+  display: block;
+  padding: 10px 0;
+}
+
+table tr:nth-child(odd) {
+  border-top: 1px solid #DED9D9;
+}
+
+table tr:last-child {
+  border-bottom: 1px solid #DED9D9;
+}
+
+table tr a:hover {
+  text-decoration: underline #a3a3a3 1px;
+}
+
+table th {
+  padding-right: 25px;
+  font-weight: normal;
+}
+
+time {
+  color: #a3a3a3;
+}
+
+section.event {
+  width: 100%;
+  object-fit: cover;
+  background-color: #e9ecf4;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #DED9D9;
+}
+
+section.event img {
+  box-shadow: 0px 3px 5px rgb(0 0 0 / 16%);
+}
+
+.event-inner {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.event-inner span {
+  color: #2a4198;
+}
+
+.event-inner h2 {
+  font-size: 45px;
+  text-align: center;
+  padding-top: 40px;
+  margin-bottom: 10px;
+  font-family: Sylfaen
+}
+
+.event-inner h3 {
+  font-size: 16px;
+  color: #a3a3a3;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+div.box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+div.box img {
+  margin-bottom: 10px;
+}
+
+figcaption {
+  line-height: 1.6;
+}
+
+figcaption p {
+  font-size: 14px;
+  color: #555555;
+}
+
+figcaption h4 {
+  font-size: 16px;
+}
+
+figcaption h4 a:hover {
+  text-decoration: underline #a3a3a3 1px;
+}
+
+div.box-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+div.box-bottom img {
+  margin-bottom: 10px;
+}
+
+
+/* --------------------------------------
+大学案内
+----------------------------------------*/
+
+#info article {
+  border-bottom: 1px solid #DED9D9;
+}
+
+#info .info-eyecatch img {
+  width: 100%;
+  height: 410px;
+  object-fit: cover;
+  margin-top: 115px;
+}
+
+#info .info-eyecatch h2 {
+  font-size: 50px;
+  color: #DED9D9;
+  margin-bottom: 40px;
+}
+
+#info .info-eyecatch p {
+  font-size: 20px;
+  color: #DED9D9;
+  line-height: 1.6;
+}
+
+#info .info-eyecatch-text {
+  position: relative;
+  margin: -330px auto 90px auto;
+  text-align: center;
+}
+
+#info .text-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 1000px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+#info .text-bottom img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+}
+
+#info .message {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555555;
+}
+
+#info .message h2 {
+  font-size: 25px;
+  text-align: center;
+  margin: 30px 30px 0 0;
+
+}
+
+#info .message p {
+  margin: 20px 40px 0 0;
+}
+
+#info .text p {
+  font-size: 18px;
+  color: #555555;
+  font-family: UD デジタル 教科書体 N-R;
+  text-align: center;
+  width: 700px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+  line-height: 1.6;
+}
+
+#info .info-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1000px;
+  padding: 50px 0px;
+  margin: 0 auto;
+}
+
+#info .border {
+  width: 1200px;
+  text-align: center;
+  margin: 0 auto 50px auto;
+}
+
+#info .slider {
+  width: 1000px;
+  margin: 0 auto 30px auto;
+}
+
+#info .slider img {
+  padding: 5px;
+}
+
+#info .wrapper-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+
+
+
+/* --------------------------------------
+学部・学科紹介
+----------------------------------------*/
+#course article {
+  border-bottom: 1px solid #DED9D9;
+}
+
+#course .course-eyecatch {
+  background-color: #e9ecf4;
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  margin: 116px 0 30px 0;
+}
+
+#course .course-eyecatch h2 {
+  font-size: 20px;
+  color: #555555;
+  text-align: center;
+  padding-top: 70px;
+  line-height: 1.6;
+}
+
+#course .border {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#course .course-box {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+#course section {
+  opacity: 0;
+}
+
+#course section.on {
+  opacity: 1;
+}
+
+#course .course-box h2 {
+  font-size: 20px;
+  color: #555555;
+  margin-bottom: 10px;
+}
+
+#course .igakubu {
+  height: 420px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 50px;
+}
+
+#course .igakubu figure {
+  width: 660px;
+  height: 290px;
+  text-align: center;
+  margin: -20px 0 0 30px;
+}
+
+#course .course-yakugakubu {
+  height: 420px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 50px;
+}
+
+#course .yakugakubu {
+  width: 660px;
+  height: 290px;
+  text-align: center;
+  margin-right: 40px;
+}
+
+#course .keizaigakubu {
+  height: 440px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 50px;
+}
+
+#course .keizaigakubu figure {
+  width: 660px;
+  height: 290px;
+  text-align: center;
+  margin: -60px 0 0 30px;
+
+}
+
+#course .course-hougakubu {
+  height: 420px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 50px;
+}
+
+#course .hougakubu {
+  width: 660px;
+  height: 290px;
+  text-align: center;
+  margin-right: 40px;
+  margin-top: -40px;
+}
+
+#course .bungakubu {
+  height: 420px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 50px;
+}
+
+#course .bungakubu figure {
+  width: 660px;
+  height: 290px;
+  text-align: center;
+  margin: -20px 0 0 30px;
+}
+
+#course .course-gaikokugo {
+  height: 440px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 50px;
+}
+
+#course .gaikokugo {
+  width: 660px;
+  height: 290px;
+  text-align: center;
+  margin: -70px 40px 0 0;
+}
+
+#course .kyouiku {
+  height: 450px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 50px;
+}
+
+#course .kyouiku figure {
+  width: 660px;
+  height: 290px;
+  text-align: center;
+  margin: -60px 0 0 30px;
+}
+
+#course .course-rikou {
+  height: 460px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 50px;
+}
+
+#course .rikougakubu {
+  width: 660px;
+  height: 290px;
+  text-align: center;
+  margin: -60px 40px 0 0;
+}
+
+#course .iryougijutsu {
+  height: 440px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 70px;
+}
+
+#course .iryougijutsu figure {
+  width: 660px;
+  height: 290px;
+  text-align: center;
+  margin: -100px 0 0 30px;
+}
+
+#course .course-fukuoka {
+  height: 420px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 70px;
+}
+
+#course .fukuoka {
+  width: 660px;
+  height: 450px;
+  text-align: center;
+  margin-right: 40px;
+}
+
+#course .fukuoka img {
+  width: auto;
+  margin-top: -150px;
+}
+
+#course .fukuoka figcaption {
+
+  margin-top: -65px;
+}
+
+#course p.more {
+  text-decoration: underline solid #555555;
+  margin-top: 10px;
+}
+
+#course p.more a:hover {
+  opacity: 0.5;
+}
+
+#course .line {
+  width: 1px;
+  height: 120px;
+  border-right: 1px solid #2a4198;
+  position: fixed;
+  bottom: 165px;
+  right: 140px;
+  font-family: UD デジタル 教科書体 N-R;
+  animation-name: border-anime;
+  animation-duration: 1.8s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  opacity: 0;
+}
+
+#course .line.on {
+  opacity: 1;
+}
+
+#course .back-top {
+  font-size: 16px;
+  color: #2a4198;
+  font-family: UD デジタル 教科書体 N-R;
+  display: inline-block;
+  padding: 10px;
+  transform: rotate(-90deg);
+  position: fixed;
+  bottom: 100px;
+  right: 100px;
+  opacity: 0;
+}
+
+#course .back-top a:hover {
+  opacity: 0.5;
+}
+
+#course .back-top.on {
+  opacity: 1;
+}
+
+@keyframes border-anime {
+  0% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+
+  50% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+
+  50.1% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+
+  100% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+}
+
+
+
+/* --------------------------------------
+入試情報
+----------------------------------------*/
+#exam main p {
+  width: 100%;
+  height: 700px;
+  margin: 0 auto;
+  padding: 150px 0 0 200px;
+  font-size: 20px;
+  color: #555555;
+  font-family: UD デジタル 教科書体 N-R;
+  border-bottom: 1px solid #DED9D9;
+}
+
+/* --------------------------------------
+国際交流
+----------------------------------------*/
+#international main p {
+  width: 100%;
+  height: 700px;
+  margin: 0 auto;
+  padding: 150px 0 0 200px;
+  font-size: 20px;
+  color: #555555;
+  font-family: UD デジタル 教科書体 N-R;
+  border-bottom: 1px solid #DED9D9;
+}
+
+/* --------------------------------------
+アクセス
+----------------------------------------*/
+#access main p {
+  width: 100%;
+  height: 700px;
+  margin: 0 auto;
+  padding: 150px 0 0 200px;
+  font-size: 20px;
+  color: #555555;
+  font-family: UD デジタル 教科書体 N-R;
+  border-bottom: 1px solid #DED9D9;
+}
